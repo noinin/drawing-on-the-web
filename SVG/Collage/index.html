@@ -11,6 +11,8 @@
 				height: 100%;
 				margin: auto;
 			}
+			
+		
 
 			#collage {
 				height: 480px;
@@ -36,7 +38,26 @@
 
 			#spring {
 				fill: black;
+				transform-origin: 20% 20%;
+				-webkit-transform-origin: 20% 20%;
+				animation: show 4s;
+				-webkit-animation: show 4s;
+				animation-direction: alternate;
+				-webkit-animation-direction: alternate;
+				animation-iteration-count:3;
+				-webkit-animation-iteration-count: 3;
 			}
+			
+			@keyframes show {
+				from {transform: rotateZ(0deg) scale(0, 0);}
+				to {transform: rotateZ(720deg) scale(1, 1);}
+			}
+
+
+			@-webkit-keyframes show {
+				from {-webkit-transform: rotateZ(0deg) scale(0, 0);}
+				to {-webkit-transform: rotateZ(720deg) scale(1, 1);}
+			}	
 
 			#building {
 				fill: black;
